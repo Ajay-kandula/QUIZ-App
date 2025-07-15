@@ -28,8 +28,14 @@ const Quiz = () => {
     const interval = setInterval(() => {
       setTimer((prev) => {
         if (prev === 1) {
-          handleNext();
+          if(current===questions.length-1){
+            SubmitQuiz()
+          }else{
+            setCurrent((prev)=>prev+1)
+            setTimer(30)
+          }
           return 30;
+          
         }
         return prev - 1;
       });
@@ -65,7 +71,7 @@ const Quiz = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`
         },
-        body: JSON.stringify({ userId, answers:formattedAnswers })
+        body: JSON.stringify({answers:formattedAnswers })
       });
 
       if (res.ok) {
