@@ -11,15 +11,16 @@ const Quiz = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/quiz/getallquestions", {
-      headers: { Authorization: `Bearer ${token}` }
-    })
-    .then((res) => {
-      setQuestions(res.data);
-    })
-    .catch(() => {
-      alert("Failed to load questions");
-    });
+    axios
+      .get("http://localhost:5000/api/quiz/getallquestions", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((res) => {
+        setQuestions(res.data);
+      })
+      .catch(() => {
+        alert("Failed to load questions");
+      });
   }, []);
 
   useEffect(() => {
@@ -28,14 +29,13 @@ const Quiz = () => {
     const interval = setInterval(() => {
       setTimer((prev) => {
         if (prev === 1) {
-          if(current===questions.length-1){
-            SubmitQuiz()
-          }else{
-            setCurrent((prev)=>prev+1)
-            setTimer(30)
+          if (current === questions.length - 1) {
+            SubmitQuiz();
+          } else {
+            setCurrent((prev) => prev + 1);
+            setTimer(30);
           }
           return 30;
-          
         }
         return prev - 1;
       });
@@ -53,34 +53,44 @@ const Quiz = () => {
     if (current < questions.length - 1) {
       setCurrent((prev) => prev + 1);
       setTimer(30);
-    }else{
+    } else {
       SubmitQuiz();
     }
   };
 
   const SubmitQuiz = async () => {
-    const userId = localStorage.getItem("userId");
-    const formattedAnswers = Object.entries(answers).map(([questionid, value]) => ({
-      questionid,
-      selectedanswer: value.selectedanswer,
-    }));
+    const formattedAnswers = questions.map((q) => {
+      const selected = answers[q._id]?.selectedanswer || "";
+      const isCorrect = selected === q.correctAnswer;
+      return {
+        questionid: q._id,
+        selectedanswer: selected,
+        isCorrect,
+      };
+    });
+
     try {
-      const res = await fetch('http://localhost:5000/api/result/submit', {
+      const res = await fetch("http://localhost:5000/api/result/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({answers:formattedAnswers })
+        body: JSON.stringify({ answers: formattedAnswers }),
       });
 
       if (res.ok) {
         const data = await res.json();
-        localStorage.setItem("score", data.score); 
+        localStorage.setItem("score", data.score);
         navigate("/Scorepage");
+      } else {
+        const error = await res.json();
+        console.error("Submission error:", error);
+        alert("Submission failed. Check console.");
       }
     } catch (err) {
       console.error("Error submitting quiz:", err);
+      alert("Error occurred during submission.");
     }
   };
 
@@ -91,7 +101,9 @@ const Quiz = () => {
   return (
     <div>
       <h1>Time Left: {timer}s</h1>
-      <h2>Q{current + 1}:{q.question}</h2>
+      <h2>
+        Q{current + 1}: {q.question}
+      </h2>
 
       <ul>
         {[q.Option1, q.Option2, q.Option3, q.Option4].map((opt, index) => (
