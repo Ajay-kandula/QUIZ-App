@@ -60,8 +60,8 @@ const Quiz = () => {
 
   const SubmitQuiz = async () => {
     const userId = localStorage.getItem("userId");
-    const formattedAnswers = Object.entries(answers).map(([questionId, value]) => ({
-      questionId,
+    const formattedAnswers = Object.entries(answers).map(([questionid, value]) => ({
+      questionid,
       selectedanswer: value.selectedanswer,
     }));
     try {
