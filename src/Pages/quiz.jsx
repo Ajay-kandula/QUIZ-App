@@ -65,7 +65,7 @@ const Quiz = () => {
       selectedanswer: value.selectedanswer,
     }));
     try {
-      const res = await fetch(`http://localhost:5000/api/result/submit`, {
+      const res = await fetch('http://localhost:5000/api/result/submit', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
