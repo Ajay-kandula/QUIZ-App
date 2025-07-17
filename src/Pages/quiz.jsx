@@ -10,19 +10,17 @@ const Quiz = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/quiz/getallquestions", {
         headers: { Authorization: `Bearer ${token}` },
       })
-      .then((res) => {
-        setQuestions(res.data);
-      })
-      .catch(() => {
-        alert("Failed to load questions");
-      });
+      .then((res) => setQuestions(res.data))
+      .catch(() => alert("Failed to load questions"));
   }, []);
 
+  
   useEffect(() => {
     if (questions.length === 0) return;
 
@@ -44,10 +42,12 @@ const Quiz = () => {
     return () => clearInterval(interval);
   }, [current, questions]);
 
+ 
   const handleOptionChange = (selected) => {
     const questionId = questions[current]._id;
     setAnswers({ ...answers, [questionId]: { selectedanswer: selected } });
   };
+
 
   const handleNext = () => {
     if (current < questions.length - 1) {
@@ -59,15 +59,10 @@ const Quiz = () => {
   };
 
   const SubmitQuiz = async () => {
-    const formattedAnswers = questions.map((q) => {
-      const selected = answers[q._id]?.selectedanswer || "";
-      const isCorrect = selected === q.correctAnswer;
-      return {
-        questionid: q._id,
-        selectedanswer: selected,
-        isCorrect,
-      };
-    });
+    const formattedAnswers = Object.entries(answers).map(([questionid, obj]) => ({
+      questionid,
+      selectedanswer: obj.selectedanswer,
+    }));
 
     try {
       const res = await fetch("http://localhost:5000/api/result/submit", {
@@ -84,16 +79,17 @@ const Quiz = () => {
         localStorage.setItem("score", data.score);
         navigate("/Scorepage");
       } else {
-        const error = await res.json();
-        console.error("Submission error:", error);
+        const err = await res.json();
+        console.error("Submission error:", err);
         alert("Submission failed. Check console.");
       }
-    } catch (err) {
-      console.error("Error submitting quiz:", err);
-      alert("Error occurred during submission.");
+    } catch (error) {
+      console.error("Error submitting quiz:", error);
+      alert("An error occurred during submission.");
     }
   };
 
+ 
   if (questions.length === 0) return <p>Loading questions...</p>;
 
   const q = questions[current];
@@ -122,10 +118,9 @@ const Quiz = () => {
         ))}
       </ul>
 
-      <button onClick={handleNext}>Next</button>
-      {current === questions.length - 1 && (
-        <button onClick={SubmitQuiz}>Submit</button>
-      )}
+      <button onClick={handleNext}>
+        {current === questions.length - 1 ? "Submit" : "Next"}
+      </button>
     </div>
   );
 };
