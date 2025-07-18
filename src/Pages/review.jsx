@@ -8,25 +8,25 @@ const Review=()=>{
     useEffect(()=>{
         axios.get('http://localhost:5000/api/result/review',{
             headers:{
-                Authorization:`Bearwe ${token}`
+                Authorization:`Bearer ${token}`
             }
             
         })
         .then(res=>{
-            setReviewdata(res.data)
+            setReviewdata(res.data.answers)
         })
         .catch(err=>{
             console.error('failed  to fetch review ',err)
             navigate('/quiz')
-        })
-    },[navigate],[token])
+        });
+    },[navigate,token])
     if(!reviewdata) return<p>Loading Review....</p>
     return(
         <div>
             <h1> Review Page</h1>
-            {reviewdata.answers.map((ans,index)=>(
+            {reviewdata.map((ans,index)=>(
                 <div key={index}>
-                    <p>Q{ans+1}:<strong>{ans+question}</strong></p>
+                    <p>Q{ans+1}:<strong>{ans.question}</strong></p>
                     <p>Yor Answer:{ans.selectedanswer}</p>
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
