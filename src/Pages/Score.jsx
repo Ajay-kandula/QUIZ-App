@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
 const Scorepage=()=>{
     const[score,setScore]=useState()
+    const[total,setTotal]=useState()
     const navigate=useNavigate()
     useEffect(()=>{
         const storedscore=localStorage.getItem('score');
