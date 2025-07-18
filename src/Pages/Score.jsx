@@ -5,6 +5,7 @@ const Scorepage=()=>{
     const navigate=useNavigate()
     useEffect(()=>{
         const storedscore=localStorage.getItem('score');
+        const totalQuestions = localStorage.getItem('total');
         if(storedscore !==null){
             setScore(storedscore)
 
@@ -18,8 +19,8 @@ const Scorepage=()=>{
     return(
         <div>
             <h1>Congratulations , your Quiz completed</h1>
-            <h2>your Score:{score}</h2>
-            <p>Ypu want to review the answers ? <button onClick={handlechange}>Review</button></p>
+            <h2>your Score:{score}/{total}</h2>
+            <p>You want to review the answers ? <button onClick={handlechange}>Review</button></p>
         </div>
     )
 }

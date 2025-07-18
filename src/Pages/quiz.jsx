@@ -77,6 +77,7 @@ const Quiz = () => {
       if (res.ok) {
         const data = await res.json();
         localStorage.setItem("score", data.score);
+        localStorage.setItem("total", questions.length); 
         navigate("/Scorepage");
       } else {
         const err = await res.json();
