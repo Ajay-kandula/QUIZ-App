@@ -27,13 +27,13 @@ const Login =()=>{
     };
     return(
         <>
-            <h1 style={{ textAlign:"center",font:"initial"}}>Login form</h1>
-            <form onSubmit={handleSubmit} style={{display:"flex", textAlign:"center", border:"1px solid #ccc", borderRadius:"7px", padding:"8px"}}>
+            <h1 style={{ textAlign:"center",font:"initial",fontWeight:'bold',fontSize:"60px"}}>Login form</h1>
+            <form onSubmit={handleSubmit} style={{display:"flex", flexDirection:'column',textAlign:"center", border:"1px solid #ccc", borderRadius:"7px", padding:"8px"}}>
                 <input type="email" value={user.email} name="email" placeholder=" Enter your email..." onChange={handlechange} required/><br/>
                 <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required/><br/>
                 <button type="submit" >Submit</button>
             </form>
-            <br/>
+
             <h5>Dont have an account ? <Link to='/Register' > Register</Link></h5>
             
 
