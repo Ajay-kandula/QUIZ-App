@@ -4,7 +4,8 @@ import axios from 'axios'
 const Review=()=>{
     const[reviewdata,setReviewdata]=useState([])
     const navigate=useNavigate()
-    const token=localStorage.getItem('token')
+    const token=localStorage.getItem('token');
+    console.log('Token:',token);
     useEffect(()=>{
         axios.get('http://localhost:5000/api/result/review',{
             headers:{
