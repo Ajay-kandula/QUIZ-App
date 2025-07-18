@@ -26,8 +26,8 @@ const Review=()=>{
             <h1> Review Page</h1>
             {reviewdata.map((ans,index)=>(
                 <div key={index}>
-                    <p>Q{ans+1}:<strong>{ans.question}</strong></p>
-                    <p>Yor Answer:{ans.selectedanswer}</p>
+                    <p>Q{index+1}:<strong>{ans.question}</strong></p>
+                    <p>Your Answer:{ans.selectedanswer}</p>
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
             ))}
