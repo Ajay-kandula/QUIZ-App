@@ -14,7 +14,7 @@ const Login =()=>{
             }else{
                 localStorage.setItem("token",res.data.token)
                 alert(`Login Sucessfull`)
-                navigate('/quiz')
+                navigate('/instructions')
             }
             
         }catch(err){

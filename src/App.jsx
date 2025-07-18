@@ -4,6 +4,7 @@ import Quiz from "./Pages/quiz";
 import Register from "./Pages/Register";
 import Review from "./Pages/review";
 import Scorepage from "./Pages/Score"; 
+import Instructions from "./Pages/instruction";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Navigate to='/login' />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/instructions" element={<Instructions/>}/>
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/scorepage" element={<Scorepage />} />
         <Route path="/review" element={<Review />} />
