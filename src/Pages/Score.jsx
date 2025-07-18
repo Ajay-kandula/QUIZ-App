@@ -9,6 +9,7 @@ const Scorepage=()=>{
         const totalQuestions = localStorage.getItem('total');
         if(storedscore !==null){
             setScore(storedscore)
+            setTotal(totalQuestions)
 
         }else{
             navigate('/quiz')
