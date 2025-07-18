@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from 'axios'
 import {useNavigate,Link} from 'react-router-dom';
-import image from '../Images/login.jpg'
+import image from '../Images'
 
 const Login =()=>{
     const[user,setUser]=useState({email:"",password:""})
