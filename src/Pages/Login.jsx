@@ -26,19 +26,15 @@ const Login =()=>{
         setUser({...user,[e.target.name]:e.target.value})
     };
     return(
-       <>
-       <h1 style={{textAlign: "center",font: "initial",fontWeight: 'bold',fontSize: "60px"}}>Login form</h1>
-       <div style={{ display: "flex", justifyContent: "center" ,alignItems:'center'}}>
-        <form onSubmit={handleSubmit} style={{ display: "flex",flexDirection: 'column',alignItems: 'center',border: "1px solid #ccc",borderRadius: "7px",padding: "16px",width: "300px"}}>
-            <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
-            <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
-            <button type="submit" style={{ padding: "8px 16px" }}>Submit</button>
-        </form>
-        </div>
-        <h5 style={{ textAlign: 'center', marginTop: '16px' }}>Don’t have an account? <Link to='/Register'>Register</Link></h5>
-        </>
-
-    )
+        <div style={{display: "flex",flexDirection: "column",alignItems: "center",justifyContent: "center",minHeight: "100vh"}}>
+            <h1 style={{font: "initial",fontWeight: 'bold',fontSize: "60px",textAlign: "center"}}>Login form</h1>
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: 'column',alignItems: 'center',border: "1px solid #ccc",borderRadius: "7px",padding: "16px",width: "300px"}}>
+                <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange} required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
+                <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
+                <button type="submit" style={{ padding: "8px 16px" }}>Submit</button>
+            </form>
+            <h5 style={{textAlign: 'center',marginTop: '16px'}}>Don’t have an account? <Link to='/Register'>Register</Link></h5></div>
+            )
 
 
 }
