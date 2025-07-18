@@ -1,9 +1,10 @@
 import React from "react";
 import {useNavigate, Link } from "react-router-dom";
-const navigate=useNavigate()
+
 function Instructions(){
+    const navigate=useNavigate();
     const Handle=(e)=>{
-        e.preventSefault()
+        e.preventDefault()
         navigate('/quiz')
     }
     return(
