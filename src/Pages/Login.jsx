@@ -27,7 +27,7 @@ const Login =()=>{
     };
     return(
         <div style={{textAlign:"center",display:"flex" ,border:'1px #solid ccc',borderRadius:"10px", padding:'6px',}}>
-            <h1 style={{ font:"initial"}}>Login form</h1>
+            <h1 style={{ textAlign:"center",font:"initial"}}>Login form</h1>
             <form onSubmit={handleSubmit}>
                 <input type="email" value={user.email} name="email" placeholder=" Enter your email..." onChange={handlechange} required/><br/>
                 <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required/><br/>
