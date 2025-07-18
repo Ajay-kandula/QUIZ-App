@@ -28,7 +28,7 @@ const Login =()=>{
     return(
        <>
        <h1 style={{textAlign: "center",font: "initial",fontWeight: 'bold',fontSize: "60px"}}>Login form</h1>
-       <div style={{ display: "flex", justifyContent: "center" }}>
+       <div style={{ display: "flex", justifyContent: "center" ,alignItems:'center'}}>
         <form onSubmit={handleSubmit} style={{ display: "flex",flexDirection: 'column',alignItems: 'center',border: "1px solid #ccc",borderRadius: "7px",padding: "16px",width: "300px"}}>
             <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
             <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom: "10px", padding: "8px", width: "100%" }}/>
