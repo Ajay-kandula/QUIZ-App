@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate, Link } from "react-router-dom";
+import inst from '../Images/Instructions.jpg'
 
 function Instructions(){
     const navigate=useNavigate();
@@ -8,9 +9,9 @@ function Instructions(){
         navigate('/quiz')
     }
     return(
-        <>
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",backgroundImage:`url(${inst})`,backgroundPosition:'center',backgroundSize:"cover",height:"100vh",width:'100vw'}}>
         <h1>📝 Quiz Instructions</h1>
-        <ul>
+        <ul style={{display:"flex",border:'2px solid #ccc',borderRadius:"6px",flexDirection:"column",justifyContent:"center",height:"300px",marginTop:"2px",gap:"5px"}}>
             <li>📚 The exam contains a total of 30 questions.</li>
             <li>⏱️ Each question has a time limit of 30 seconds.</li>
             <li>🕒 Total duration of the exam is 1 hour and 30 minutes.</li>
@@ -20,8 +21,8 @@ function Instructions(){
             <li>🔍 You can review the entire quiz after submission by clicking on the "Review" button.</li>
             
         </ul>
-        <button onClick={Handle}>Start</button>
-        </>
+        <button onClick={Handle} style={{width:"150px",backgroundColor:"#2a52be",color:"white",fontWeight:"bold"}}>Start</button>
+        </div>
     )
 
 }
