@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate, Link } from "react-router-dom";
-import inst from 'https://ibb.co/ZRLXyTGT'
+import inst from '../Images/Instructions.jpg'
 
 function Instructions(){
     const navigate=useNavigate();
