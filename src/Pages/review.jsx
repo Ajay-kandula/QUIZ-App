@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
-import {useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import {useNavigate} from 'react-router-dom';
+import axios from 'axios';
 const Review=()=>{
     const[reviewdata,setReviewdata]=useState([])
     const navigate=useNavigate()
@@ -23,15 +23,15 @@ const Review=()=>{
     },[navigate,token])
     if(!reviewdata) return<p>Loading Review....</p>
     return(
-        <div>
-            <h1> Review Page</h1>
+        <div style={{backgroundColor:"#f3f3f3ff",display:'flex',flexDirection:"column",justifyContent:"center",width:"100vw",color:"white",fontSize:"30px",textAlign:'center'}}>
+            <h1 style={{color:'red'}}> Review Page</h1>
             {reviewdata.map((ans,index)=>(
-                <div key={index}>
+                <div key={index} style={{border:"2px solid black",borderRadius:"8px",padding:"8px",margin:'10px 20px',backgroundColor:"#6fa8dc"}}>
                     <p>Q{index+1}:<strong>{ans.question}</strong></p>
                     <p>Your Answer:{ans.selectedanswer}</p>
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
-            ))}
+            ))};
         </div>
     )
 }

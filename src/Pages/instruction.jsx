@@ -17,8 +17,10 @@ function Instructions(){
             <li>🕒 Total duration of the exam is 1 hour and 30 minutes.</li>
             <li>🔁 Once you click "Next" or the timer runs out, you cannot go back to the previous question.</li>
             <li>❌ There are no negative marks for wrong answers.</li>
-            <li>✅ After completing all questions, click on "Submit" to view your score.</li>
+            <li>✅ After completing all questions, click on "Submit" t  o view your score.</li>
             <li>🔍 You can review the entire quiz after submission by clicking on the "Review" button.</li>
+            <li>Ckick 'Start' below to Start the Exam</li>
+            <li>You need to answer atleast one question to submit the quiz</li>
             
         </ul>
         <button onClick={Handle} style={{width:"150px",backgroundColor:"#2a52be",color:"white",fontWeight:"bold"}}>Start</button>

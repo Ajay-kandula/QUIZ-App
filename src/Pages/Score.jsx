@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
+import Score from '../Images/score.jpg'
 const Scorepage=()=>{
     const[score,setScore]=useState()
     const[total,setTotal]=useState()
@@ -19,10 +20,13 @@ const Scorepage=()=>{
         navigate('/Review')
     }
     return(
-        <div>
-            <h1>Congratulations , your Quiz completed</h1>
-            <h2>your Score:{score}/{total}</h2>
-            <p>You want to review the answers ? <button onClick={handlechange}>Review</button></p>
+        <div style={{
+      backgroundImage: `url(${Score})`,backgroundPosition:"center",backgroundSize:"cover",display:"flex",flexDirection:"column",justifyContent:"center",height:"100vh",width:"100vw",alignItems:"center",gap:"4px"}}>
+            <h1 style={{marginTop:"50px",marginBottom:'10px',color:'#006b3c'}}>Congratulations 👏</h1>
+            <h3 style={{marginBottom:"10px",color:"#daa520"}}>Your Quiz completed</h3>
+            <h4 style={{marginTop:"3px",marginBottom:"10px",fontSize:"50px",color:"#ff2800"}}>Score</h4>
+            <h2 style={{marginTop:"2px",fontSize:"30px",color:"#03c03c"}}>{score}/{total}</h2>
+            <p style={{marginTop:"60px",marginBottom:"20px"}}>You want to review the answers ? <button onClick={handlechange} style={{color:"white",backgroundColor:"#2a52be",padding:"3px",width:"80px"}}>Review</button></p>
         </div>
     )
 }
