@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import quiz from '../Images/quiz.jpg'
+import quiz from 'https://ibb.co/dJ6fBZKL'
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);

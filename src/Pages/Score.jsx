@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import {useNavigate} from 'react-router-dom'
-import Score from '../Images/score.jpg'
+import Score from 'https://ibb.co/5XdHrmfV'
 const Scorepage=()=>{
     const[score,setScore]=useState()
     const[total,setTotal]=useState()
