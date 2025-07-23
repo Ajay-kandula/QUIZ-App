@@ -28,13 +28,13 @@ const Login =()=>{
         setUser({...user,[e.target.name]:e.target.value})
     };
     return( 
-        <div style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url(${login})`,backgroundPosition:'center',backgroundSize:"cover",padding:'20px'}} >
-            <h1 style={{color:"white",marginBottom:"1px",marginLeft:'190px'}}>Login form</h1>
+        <div style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url(${login})`,backgroundPosition:'center',backgroundSize:"cover"}} >
+            <h1 style={{color:"white",marginBottom:"1px",marginLeft:'190px',marginTop:"5px"}}>Login form</h1>
             <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:"100px",marginTop:"50px"}}>
                 <form onSubmit={handleSubmit} >
-                    <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'30%',padding:"10px"}}/>
-                    <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom:"20px",border:"none",borderRadius:"6px",padding:"10px",width:"30%"}} /><br/>
-                    <button type="submit" style={{  padding: "8px 16px",color:"white",backgroundColor:"#2a52be  ",width:"15%" }}>Submit</button>
+                    <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'70%',padding:"10px"}}/>
+                    <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom:"20px",border:"none",borderRadius:"6px",padding:"10px",width:"70%"}} /><br/>
+                    <button type="submit" style={{  padding: "8px 16px",color:"white",backgroundColor:"#2a52be  ",width:"50%" }}>Submit</button>
             </form>
             </div>
             <h4 style={{marginTop: '10px',color:"green",marginLeft:'190px'}}>Don’t have an account? <Link to='/Register'>Register</Link></h4></div>
