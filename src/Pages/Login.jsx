@@ -34,7 +34,7 @@ const Login =()=>{
                 <form onSubmit={handleSubmit} >
                     <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'90%',padding:"10px"}}/>
                     <input type="password" value={user.password} name="password" placeholder="Enter your password..." onChange={handlechange} required style={{ marginBottom:"20px",border:"none",borderRadius:"6px",padding:"10px",width:"90%"}} /><br/>
-                    <button type="submit" style={{  padding: "8px 16px",color:"white",backgroundColor:"#2a52be  ",width:"50%" }}>Submit</button>
+                    <button type="submit" style={{  padding: "10px",color:"white",backgroundColor:"#2a52be  ",width:"50%" }}>Submit</button>
             </form>
             </div>
             <h4 style={{marginTop: '10px',color:"green",marginLeft:'190px'}}>Don’t have an account? <Link to='/Register'>Register</Link></h4></div>
