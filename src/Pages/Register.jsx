@@ -38,7 +38,7 @@ const Register= ()=>{
                     <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required style={{ marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
                     <input type="password" name="password" value={form.password} placeholder="Enter your password..." onChange={handlChange} required style={{ marginBottom:"18px",padding:"10px",borderRadius:"6px",border:"none",width:"91%"}}/><br/>
                     <button type="submit" style={{backgroundColor:"#2a52be",color:"white",border :"none",borderRadius:"6px",fontWeight:"bold",width:"50%",padding:"10px"}}> Submit</button>
-            </form>
+                </form>
             </div>
             <h4 style={{color:"green",marginTop:"20px",marginLeft:"170px",width:"30%"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
         </div>
