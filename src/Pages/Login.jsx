@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 import axios from 'axios'
 import {useNavigate,Link} from 'react-router-dom';
-import login from 'https://i.ibb.co/HLDBmrwM/register.jpg'
 
 
 const Login =()=>{
@@ -28,7 +27,7 @@ const Login =()=>{
         setUser({...user,[e.target.name]:e.target.value})
     };
     return( 
-        <div style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url(${login})`,backgroundPosition:'center',backgroundSize:"cover"}} >
+        <div style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url("https://i.ibb.co/HLDBmrwM/register.jpg")`,backgroundPosition:'center',backgroundSize:"cover"}} >
             <h1 style={{color:"white",marginBottom:"1px",marginLeft:'190px',marginTop:"60px",width:"30%"}}>Login form</h1>
             <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:"35%",maxWidth:"400px",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:"100px",marginTop:"50px"}}>
                 <form onSubmit={handleSubmit} >
