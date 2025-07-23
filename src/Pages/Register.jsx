@@ -32,7 +32,7 @@ const Register= ()=>{
     }
     return(
         <div style={{backgroundImage:`url(${register})`,backgroundPosition:'center',backgroundSize:'cover',minHeight:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
-            <h1 style={{marginBottom:"10px",color:"white",marginLeft:"160px"}}>Register Page</h1>
+            <h1 style={{marginBottom:"10px",color:"white",marginLeft:"160px",width:"30%"}}>Register Page</h1>
             <div  style={{display:"flex",flexDirection:"column",color:"white",border:"1px solid #ccc", borderRadius:"6px",padding:"30px",width:"35%",height:"30%",alignItems:"center",marginTop:"40px",textAlign:"center",marginLeft:"100px"}}>
                 <form onSubmit={handleregister} >
                     <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
@@ -41,7 +41,7 @@ const Register= ()=>{
                     <button type="submit" style={{backgroundColor:"#2a52be",color:"white",border :"none",borderRadius:"6px",fontWeight:"bold",width:"50%",padding:"10px"}}> Submit</button>
             </form>
             </div>
-            <h4 style={{color:"green",marginTop:"20px",marginLeft:"170px"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
+            <h4 style={{color:"green",marginTop:"20px",marginLeft:"170px",width:"30%"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
         </div>
     )
 }
