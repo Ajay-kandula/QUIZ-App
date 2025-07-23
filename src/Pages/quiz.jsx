@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import quiz from '../Images/quiz.jpg'
+
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -96,9 +96,9 @@ const Quiz = () => {
   const q = questions[current];
 
   return (
-    <div  style={{backgroundImage:`url(${quiz})`,backgroundPosition:"center",backgroundSize:"cover",height:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
+    <div  style={{backgroundImage:`url("https://i.ibb.co/WvDS0xQd/iz-compressed.webp")`,backgroundPosition:"center",backgroundSize:"cover",height:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
       <h4 style={{marginLeft:"1050px",marginBottom:"65px",fontSize:"25px"}}>Time Left: {timer}s</h4>
-      <div style={{display:"flex", flexDirection:"column",height:"300px",width:"600px",marginLeft:"500px",border:"2px solid grey",fontSize:"20px",borderRadius:"10px"}}>
+      <div style={{display:"flex", flexDirection:"column",height:"80%",width:"600px",marginLeft:"500px",border:"2px solid grey",fontSize:"20px",borderRadius:"10px"}}>
         <h2 style={{textAlign:"center"}}>Q{current + 1}: {q.question}</h2>
         <ul style={{marginLeft:"10px",marginTop:"1px"}}>
           {[q.Option1, q.Option2, q.Option3, q.Option4].map((opt, index) => (

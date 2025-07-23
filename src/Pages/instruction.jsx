@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate, Link } from "react-router-dom";
-import inst from '../Images/Instructions.jpg'
+
 
 function Instructions(){
     const navigate=useNavigate();
@@ -9,9 +9,9 @@ function Instructions(){
         navigate('/quiz')
     }
     return(
-        <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",backgroundImage:`url(${inst})`,backgroundPosition:'center',backgroundSize:"cover",height:"100vh",width:'100vw'}}>
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",backgroundImage:`url("https://i.ibb.co/cSczX4KX/Whats-App-Image-2025-07-23-at-16-24-15-367184b6-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover",height:"100vh",width:'100vw'}}>
         <h1>📝 Quiz Instructions</h1>
-        <ul style={{display:"flex",border:'2px solid #ccc',borderRadius:"6px",flexDirection:"column",justifyContent:"center",height:"300px",marginTop:"2px",gap:"5px"}}>
+        <ul style={{display:"flex",border:'2px solid #ccc',borderRadius:"6px",flexDirection:"column",justifyContent:"center",height:"90%",marginTop:"2px",gap:"5px"}}>
             <li>📚 The exam contains a total of 30 questions.</li>
             <li>⏱️ Each question has a time limit of 30 seconds.</li>
             <li>🕒 Total duration of the exam is 1 hour and 30 minutes.</li>
