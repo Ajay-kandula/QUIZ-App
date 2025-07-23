@@ -33,7 +33,7 @@ const Register= ()=>{
     return(
         <div style={{backgroundImage:`url(${register})`,backgroundPosition:'center',backgroundSize:'cover',minHeight:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
             <h1 style={{marginBottom:"10px",color:"white",marginLeft:"160px",width:"30%"}}>Register Page</h1>
-            <div  style={{display:"flex",flexDirection:"column",color:"white",border:"1px solid #ccc", borderRadius:"6px",padding:"30px",width:"35%",maxWidth:"400px",height:"30%",alignItems:"center",marginTop:"40px",textAlign:"center",marginLeft:"100px"}}>
+            <div  style={{display:"flex",flexDirection:"column",color:"white",border:"1px solid #ccc", borderRadius:"6px",padding:"30px",width:"35%",maxWidth:"100%",height:"30%",alignItems:"center",marginTop:"40px",textAlign:"center",marginLeft:"100px"}}>
                 <form onSubmit={handleregister} >
                     <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
                     <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required style={{ marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
