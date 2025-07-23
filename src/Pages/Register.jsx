@@ -30,7 +30,7 @@ const Register= ()=>{
         setForm({...form,[e.target.name]:e.target.value})
     }
     return(
-        <div style={{backgroundImage:`url("https://i.ibb.co/HLDBmrwM/register.jpg)`,backgroundPosition:'center',backgroundSize:'cover',minHeight:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
+        <div style={{backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:'cover',minHeight:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
             <h1 style={{marginBottom:"10px",color:"white",marginLeft:"160px",width:"30%"}}>Register Page</h1>
             <div  style={{display:"flex",flexDirection:"column",color:"white",border:"1px solid #ccc", borderRadius:"6px",padding:"30px",width:"35%",maxWidth:"100%",height:"30%",alignItems:"center",marginTop:"40px",textAlign:"center",marginLeft:"100px"}}>
                 <form onSubmit={handleregister} >
