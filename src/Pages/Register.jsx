@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from 'axios';
 import {useNavigate,Link} from 'react-router-dom';
-import register from 'https://ibb.co/j9vb7L0x'
+import register from 'https://i.ibb.co/HLDBmrwM/register.jpg'
 const Register= ()=>{
     const[form,setForm]=useState({name:'',email:'',password:""})
     const navigate=useNavigate()

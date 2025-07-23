@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from 'axios'
 import {useNavigate,Link} from 'react-router-dom';
-import login from 'https://ibb.co/j9vb7L0x'
+import login from 'https://i.ibb.co/HLDBmrwM/register.jpg'
 
 
 const Login =()=>{
