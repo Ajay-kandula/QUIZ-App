@@ -3,9 +3,12 @@ import axios from 'axios'
 import {useNavigate,Link} from 'react-router-dom';
 
 
+
 const Login =()=>{
+
     const[user,setUser]=useState({email:"",password:""})
     const navigate=useNavigate();
+    const isMobile = window.innerWidth < 768;
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
