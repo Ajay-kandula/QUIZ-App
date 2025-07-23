@@ -20,7 +20,7 @@ const Register= ()=>{
             return alert("Password is required");
         };
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/register', form);
+            const res = await axios.post('https://quiz-app-backend-quiz.onrender.com/api/auth/register', form);
             alert("Successfully registered, please click on login");
             navigate('/Login');
         } catch (err) {

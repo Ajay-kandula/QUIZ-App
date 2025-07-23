@@ -13,8 +13,7 @@ const Quiz = () => {
 
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/quiz/getallquestions", {
+    axios.get("https://quiz-app-backend-quiz.onrender.com/api/quiz", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setQuestions(res.data))
@@ -66,7 +65,7 @@ const Quiz = () => {
     }));
 
     try {
-      const res = await fetch("http://localhost:5000/api/result/submit", {
+      const res = await fetch("https://quiz-app-backend-quiz.onrender.com/api/result/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

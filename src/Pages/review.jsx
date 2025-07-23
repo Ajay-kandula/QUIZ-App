@@ -7,7 +7,7 @@ const Review=()=>{
     const token=localStorage.getItem('token');
     console.log('Token:',token);
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/result/review',{
+        axios.get('https://quiz-app-backend-quiz.onrender.com/api/result/review',{
             headers:{
                 Authorization:`Bearer ${token}`
             }

@@ -10,7 +10,7 @@ const Login =()=>{
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
-            const res=await axios.post('http://localhost:5000/api/auth/login',user);
+            const res=await axios.post("https://quiz-app-backend-quiz.onrender.com/api/auth/login",user);
             if(!user.email){
                 alert(`pls register , click on register `)
             }else{
