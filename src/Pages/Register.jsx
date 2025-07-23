@@ -30,14 +30,14 @@ const Register= ()=>{
         setForm({...form,[e.target.name]:e.target.value})
     }
     return(
-        <div style={{backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:'cover',minHeight:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
-            <h1 style={{marginBottom:"10px",color:"white",marginLeft:"160px",width:"30%"}}>Register Page</h1>
-            <div  style={{display:"flex",flexDirection:"column",color:"white",border:"1px solid #ccc", borderRadius:"6px",padding:"30px",width:"30%",height:"30%",alignItems:"center",marginTop:"40px",textAlign:"center",marginLeft:"100px"}}>
+        <div  style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover"}}>
+            <h1 style={{color:"white",marginBottom:"1px",marginLeft:'190px',marginTop:"60px",width:"30%"}}>Register Page</h1>
+            <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:"100px",marginTop:"50px"}}>
                 <form onSubmit={handleregister} >
                     <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
-                    <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required style={{ marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
-                    <input type="password" name="password" value={form.password} placeholder="Enter your password..." onChange={handlChange} required style={{ marginBottom:"18px",padding:"10px",borderRadius:"6px",border:"none",width:"91%"}}/><br/>
-                    <button type="submit" style={{backgroundColor:"#2a52be",color:"white",border :"none",borderRadius:"6px",fontWeight:"bold",width:"50%",padding:"10px"}}> Submit</button>
+                    <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'90%',padding:"10px"}}/><br/>
+                    <input type="password" name="password" value={form.password} placeholder="Enter your password..." onChange={handlChange} required   style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'90%',padding:"10px"}}/><br/>
+                    <button type="submit" style={{  padding: "10px",color:"white",backgroundColor:"#2a52be  ",width:"50%" }}> Submit</button>
                 </form>
             </div>
             <h4 style={{color:"green",marginTop:"20px",marginLeft:"170px",width:"30%"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
