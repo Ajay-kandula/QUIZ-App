@@ -13,7 +13,7 @@ const Quiz = () => {
 
 
   useEffect(() => {
-    axios.get("https://quiz-app-backend-quiz.onrender.com/api/quiz", {
+    axios.get("https://quiz-app-backend-quiz.onrender.com/api/quiz/getallquestions", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setQuestions(res.data))
