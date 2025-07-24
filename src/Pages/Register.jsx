@@ -32,7 +32,7 @@ const Register= ()=>{
     }
     return(
         <div  style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover"}}>
-            <h1 style={{color:"white",marginBottom:"1px",marginLeft:isMobile?"15%":'15%',marginTop:isMobile?"50%":"60px",width:isMobile?"90%":"30%",fontWeight:"bold"}}>Register Page</h1>
+            <h1 style={{color:"white",marginBottom:"1px",marginLeft:isMobile?"10%":'15%',marginTop:isMobile?"50%":"60px",width:isMobile?"90%":"30%",fontWeight:"bold",fontSize:isMobile?'30px':'60px'}}>Register Page</h1>
             <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:isMobile?"50%":"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:isMobile?"20px":"100px",marginTop:"50px"}}>
                 <form onSubmit={handleregister} >
                     <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:isMobile?"90%":"350px"}}/><br/>
