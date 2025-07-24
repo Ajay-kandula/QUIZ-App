@@ -22,6 +22,11 @@ const Review=()=>{
         });
     },[navigate,token])
     if(!reviewdata) return<p>Loading Review....</p>
+    const handleExit=(e)=>{
+        e.preventDefault()
+        useNavigate('/Login')
+
+    }
     return(
         <div style={{backgroundColor:"#f3f3f3ff",display:'flex',flexDirection:"column",justifyContent:"center",width:"100vw",color:"white",fontSize:"30px",textAlign:'center'}}>
             <h1 style={{color:'red'}}> Review Page</h1>
@@ -32,6 +37,7 @@ const Review=()=>{
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
             ))};
+            <button onClick={handleExit} style={{color:red,alignItems:"center",padding:"8px 12px"}}>Exit</button>
         </div>
     )
 }
