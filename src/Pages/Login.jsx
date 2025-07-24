@@ -31,7 +31,7 @@ const Login =()=>{
     };
     return( 
         <div style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover"}} >
-            <h1 style={{color:"white",marginLeft:isMobile ? "50px" : "250px",marginTop:isMobile? '250px':"80px",width:isMobile ? "90%" : "40%",fontSize:isMobile ? "40px" : "40px",marginBottom:isMobile?"1px":"1px"}}>Login form</h1>
+            <h1 style={{color:"white",marginLeft:isMobile ? "50px" : "250px",marginTop:isMobile? '250px':"80px",width:isMobile ? "90%" : "40%",fontSize:isMobile ? "40px" : "40px",marginBottom:isMobile?"1px":"1px",fontWeight:"bold"}}>Login Form</h1>
             <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:isMobile ?"50%":"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:isMobile?"20px":"100px",marginTop:isMobile?"20px":"30px"}}>
                 <form onSubmit={handleSubmit} >
                     <input type="email" value={user.email} name="email" placeholder="Enter your email..." onChange={handlechange}  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:isMobile?"90%":'90%',padding:"10px"}}/>

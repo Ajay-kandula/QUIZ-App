@@ -3,6 +3,7 @@ import axios from 'axios';
 import {useNavigate,Link} from 'react-router-dom';
 const Register= ()=>{
     const[form,setForm]=useState({name:'',email:'',password:""})
+    const isMobile=window.innerWidth<768;
     const navigate=useNavigate()
     const handleregister = async (e) => {
         e.preventDefault();
@@ -31,16 +32,16 @@ const Register= ()=>{
     }
     return(
         <div  style={{display:'flex',justifyContent:"flex-start",flexDirection:"column",minHeight:"100vh",width:"100vw",alignItems:"flex-start",backgroundImage:`url("https://i.ibb.co/QvGWFSXJ/log-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover"}}>
-            <h1 style={{color:"white",marginBottom:"1px",marginLeft:'15%',marginTop:"60px",width:"30%"}}>Register Page</h1>
-            <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:"100px",marginTop:"50px"}}>
+            <h1 style={{color:"white",marginBottom:"1px",marginLeft:isMobile?"15%":'15%',marginTop:isMobile?"40%":"60px",width:isMobile?"30%":"30%"}}>Register Page</h1>
+            <div  style={{display:"flex",justifyContent:'center',alignItems:"center",marginBottom:"18px",height:"30%",width:isMobile?"35%":"35%",flexDirection:"column",border:"1px solid #ccc",borderRadius:"6px",padding:"30px",textAlign:'center',marginLeft:isMobile?"100px":"100px",marginTop:"50px"}}>
                 <form onSubmit={handleregister} >
-                    <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:"90%"}}/><br/>
-                    <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'90%',padding:"10px"}}/><br/>
-                    <input type="password" name="password" value={form.password} placeholder="Enter your password..." onChange={handlChange} required   style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:'90%',padding:"10px"}}/><br/>
-                    <button type="submit" style={{  padding: "10px",color:"white",backgroundColor:"#2a52be  ",width:"50%" }}> Submit</button>
+                    <input type="name" name="name" value={form.name} placeholder="Enter your name..." onChange={handlChange} required style={{marginTop:"20px",marginBottom:"18px",border:"none",padding:"10px",borderRadius:"6px",width:isMobile?"90%":"300px"}}/><br/>
+                    <input type="email" name="email" value={form.email} placeholder="Enter your email..." onChange={handlChange} required  style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:isMobile?"90%":'300px',padding:"10px"}}/><br/>
+                    <input type="password" name="password" value={form.password} placeholder="Enter your password..." onChange={handlChange} required   style={{marginBottom:"20px",border:'none',borderRadius:"6px",width:isMobile?"90%":'300px',padding:"10px"}}/><br/>
+                    <button type="submit" style={{  padding: "10px",color:"white",backgroundColor:"#2a52be  ",width:isMobile?"50%":"150px" }}> Submit</button>
                 </form>
             </div>
-            <h4 style={{color:"green",marginTop:"20px",marginLeft:"170px",width:"30%"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
+            <h4 style={{color:"green",marginTop:"20px",marginLeft:isMobile?"150px":"170px",width:isMobile?"90%":"30%"}}>already have an account ? <Link to ='/Login' style={{color: "#2a52be" }}> Login here</Link></h4>
         </div>
     )
 }
