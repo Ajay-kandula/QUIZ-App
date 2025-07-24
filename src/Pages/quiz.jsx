@@ -98,8 +98,8 @@ const Quiz = () => {
 
   return (
     <div  style={{backgroundImage:`url("https://i.ibb.co/WvDS0xQd/iz-compressed.webp")`,backgroundPosition:"center",backgroundSize:"cover",height:"100vh",width:'100vw',display:"flex",justifyContent:"flex-start",flexDirection:"column",alignItems:"flex-start"}}>
-      <h4 style={{marginLeft:isMobile?"200PX":"1050px",marginBottom:isMobile?"10px":"10px",fontSize:isMobile?"18px":"25px"}}>Time Left: {timer}s</h4>
-      <div style={{display:"flex", flexDirection:"column",height:isMobile?"auto":"80%",width:isMobile?"80%":"600px",marginLeft:isMobile?"20px":"500px",border:"2px solid grey",fontSize:isMobile?"14px":"20px",borderRadius:"10px",padding:isMobile?"10px":"0",marginTop:isMobile?"50%":"80px"}}>
+      <h4 style={{marginLeft:isMobile?"200px":"1050px",marginBottom:isMobile?"8px":"10px",fontSize:isMobile?"18px":"25px"}}>Time Left: {timer}s</h4>
+      <div style={{display:"flex", flexDirection:"column",height:isMobile?"auto":"80%",width:isMobile?"80%":"600px",marginLeft:isMobile?"20px":"500px",border:"2px solid grey",fontSize:isMobile?"14px":"20px",borderRadius:"10px",padding:isMobile?"10px":"0",marginTop:isMobile?"50%":"75px"}}>
         <h2 style={{textAlign:"center"}}>Q{current + 1}: {q.question}</h2>
         <ul style={{marginLeft:"10px",marginTop:"1px"}}>
           {[q.Option1, q.Option2, q.Option3, q.Option4].map((opt, index) => (
