@@ -111,7 +111,7 @@ const Quiz = () => {
           ))}
           </ul>
       </div>
-      <button onClick={handleNext} style={{marginLeft:isMobile?"50px":"780px",marginTop:"20px",backgroundColor:"#d80000",color:"white",width:"100px",fontSize:isMobile?"14px":"16px"}}>
+      <button onClick={handleNext} style={{marginLeft:isMobile?"150px":"780px",marginTop:"20px",backgroundColor:"#d80000",color:"white",width:"100px",fontSize:isMobile?"14px":"16px"}}>
         {current === questions.length - 1 ? "Submit" : "Next"}
       </button>
     </div>
