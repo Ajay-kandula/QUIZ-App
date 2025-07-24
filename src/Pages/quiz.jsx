@@ -92,7 +92,7 @@ const Quiz = () => {
   };
 
  
-  if (questions.length === 0) return <p style={{color:'red',textAlign:"center",fontWeight:"bold"}}>Loading questions...</p>;
+  if (questions.length === 0) return <p style={{color:'red',textAlign:"center",fontWeight:"bold",marginLeft:"50%",fontSize:isMobile?"20px":"40px"}}>Loading questions...</p>;
 
   const q = questions[current];
 
