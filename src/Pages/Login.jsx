@@ -8,21 +8,26 @@ const Login =()=>{
 
     const[user,setUser]=useState({email:"",password:""})
     const navigate=useNavigate();
+    const[popup,setPopup]=useState('')
+    const[showpopup,setShowpopup]=useState(false)
     const isMobile = window.innerWidth < 768;
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try{
             const res=await axios.post("https://quiz-app-backend-quiz.onrender.com/api/auth/login",user);
             if(!user.email){
-                alert(`pls register , click on register `)
+                setPopup(`pls register , click on register `)
+                showpopup(true)
             }else{
                 localStorage.setItem("token",res.data.token)
-                alert(`Login Sucessfull`)
+                setPopup(`Login Sucessfull`)
+                showpopup(true)
                 navigate('/instructions')
             }
             
         }catch(err){
-            alert(`Login failed`)
+            setPopup(`Login failed`)
+            showpopup(true)
         }
 
     }
