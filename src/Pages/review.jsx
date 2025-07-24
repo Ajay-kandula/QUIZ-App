@@ -38,7 +38,7 @@ const Review=()=>{
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
             ))};
-            <button onClick={handleExit} style={{color:"white",backgroundColor:"red",padding:"8px 12px",width:isMobile?"50px":"100px",marginLeft:isMobile?'50%':'50%'}}>Exit</button>
+            <button onClick={handleExit} style={{color:"white",backgroundColor:"red",padding:"8px 12px",width:isMobile?"50px":"100px",marginLeft:isMobile?'100px':'250%'}}>Exit</button>
         </div>
     )
 }
