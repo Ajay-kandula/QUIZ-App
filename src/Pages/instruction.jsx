@@ -12,7 +12,7 @@ function Instructions(){
     return(
         <div style={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column",backgroundImage:`url("https://i.ibb.co/cSczX4KX/Whats-App-Image-2025-07-23-at-16-24-15-367184b6-compressed.webp")`,backgroundPosition:'center',backgroundSize:"cover",height:"100vh",width:'100vw'}}>
         <h1 style={{fontSize:isMobile?"40px":"60px",fontWeight:"bold"}}>📝 Quiz Instructions</h1>
-        <ul style={{display:"flex",border:'2px solid #ccc',borderRadius:"6px",flexDirection:"column",justifyContent:"center",height:isMobile?"60%":"90%",width:isMobile?"70%":"50%",marginTop:"2px",gap:"5px"}}>
+        <ul style={{display:"flex",border:'2px solid #ccc',borderRadius:"6px",flexDirection:"column",justifyContent:"center",height:isMobile?"60%":"90%",width:isMobile?"73%":"50%",marginTop:"2px",gap:"5px"}}>
             <li>📚 The exam contains a total of 30 questions.</li>
             <li>⏱️ Each question has a time limit of 30 seconds.</li>
             <li>🕒 Total duration of the exam is 1 hour and 30 minutes.</li>
