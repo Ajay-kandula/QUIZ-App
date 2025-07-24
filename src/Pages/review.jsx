@@ -24,7 +24,7 @@ const Review=()=>{
     if(!reviewdata) return<p>Loading Review....</p>
     const handleExit=(e)=>{
         e.preventDefault()
-        useNavigate('/Login')
+        navigate('/Login')
 
     }
     return(
@@ -37,7 +37,7 @@ const Review=()=>{
                     <p>{ans.isCorrect? "correct":`Wrong | correctAnswer :${ans.correctAnswer}`}</p>
                 </div>
             ))};
-            <button onClick={handleExit} style={{color:"red",alignItems:"center",padding:"8px 12px"}}>Exit</button>
+            <button onClick={handleExit} style={{color:"red",alignItems:"center",padding:"8px 12px",width:isMobile?"40px":"50px"}}>Exit</button>
         </div>
     )
 }
