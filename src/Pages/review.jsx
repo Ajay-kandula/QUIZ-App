@@ -5,6 +5,7 @@ const Review=()=>{
     const[reviewdata,setReviewdata]=useState([])
     const navigate=useNavigate()
     const token=localStorage.getItem('token');
+    const isMobile=window.innerWidth<768;
     console.log('Token:',token);
     useEffect(()=>{
         axios.get('https://quiz-app-backend-quiz.onrender.com/api/result/review',{
